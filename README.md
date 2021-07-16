@@ -5,11 +5,7 @@
 ## 配置环境
 必选：
 1. Python 3.7+ (?)
-2. 安装第三方库：
-   - PyQt5：`pip install PyQt5`
-   - flask：`pip install flask`
-   - pillow：`pip install pillow`
-   - pywin32：`pip install pywin32`
+2. 安装依赖：`pip install -r requirements.txt`
 3. 将 [frpc](https://github.com/fatedier/frp) 的可执行文件移至目录内
 
 可选：
