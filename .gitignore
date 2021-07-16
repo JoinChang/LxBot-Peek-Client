@@ -1,0 +1,7 @@
+*.spec
+config.ini
+frpc.ini
+frpc.exe
+__pycache__
+/build
+/dist
