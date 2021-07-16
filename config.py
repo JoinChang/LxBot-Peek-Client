@@ -17,3 +17,5 @@ class Config:
         with open("config.ini", "w") as f:
             self.cp.write(f)
         return True
+
+config = Config()

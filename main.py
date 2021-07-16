@@ -13,9 +13,7 @@ from system_hotkey import SystemHotkey
 
 from thread import WorkThreadFlask, WorkThreadFrp
 from autorun import autorun
-from config import Config
-
-config = Config()
+from config import config
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     sig_keyhot = pyqtSignal(str) # 热键信号
