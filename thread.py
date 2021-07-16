@@ -8,12 +8,11 @@ from flask import Flask, send_file, abort
 
 from config import Config
 
-config = Config()
-
 app = Flask(__name__)
 
 @app.route('/peek')
 def peek():
+    config = Config()
     if int(config.get("client", "status", 0)) == 0:
         return abort(403)
     pic = ImageGrab.grab().convert("RGB")
@@ -31,6 +30,7 @@ class WorkThreadFlask(QThread):
         super(WorkThreadFlask, self).__init__()
 
     def run(self):
+        config = Config()
         app.run(host=config.get("client", "host", "0.0.0.0"), port=int(config.get("client", "port", 12345)), debug=True, use_reloader=False)
 
 class WorkThreadFrp(QThread):
